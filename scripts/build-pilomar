@@ -1,0 +1,19 @@
+#!/bin/bash
+# ####################################################################
+# script: build-pilomar
+# Save as UNIX file.
+# 5.Dec.2023 / Rasbian Bookworm
+# ####################################################################
+
+export pilomarhome='/home/pi/pilomar'
+echo home directory is: $pilomarhome
+
+# list current packages and versions.
+echo Initial packages installed>>$pilomarhome/log/buildpilomar
+echo - dpkg list:----------------------------------------------
+dpkg-query -l>>$pilomarhome/log/buildpilomar
+echo - pip3 list:----------------------------------------------
+pip3 list>>$pilomarhome/log/buildpilomar
+echo - apt list:-----------------------------------------------
+apt list --installed>>$pilomarhome/log/buildpilomar
+echo ----------------------------------------------------------
