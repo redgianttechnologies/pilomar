@@ -20,11 +20,21 @@ echo "Home directory is set to: $observatory"
 echo -e
 
 # list current packages and versions.
-echo Initial packages installed>>$observatory/log/buildpilomar
-echo - dpkg list:----------------------------------------------
-dpkg-query -l>>$observatory/log/buildpilomar
-echo - pip3 list:----------------------------------------------
-pip3 list>>$observatory/log/buildpilomar
-echo - apt list:-----------------------------------------------
-apt list --installed>>$observatory/log/buildpilomar
-echo ----------------------------------------------------------
+#echo Initial packages installed>>$observatory/log/buildpilomar
+#echo - dpkg list:----------------------------------------------
+#dpkg-query -l>>$observatory/log/buildpilomar
+#echo - pip3 list:----------------------------------------------
+#pip3 list>>$observatory/log/buildpilomar
+#echo - apt list:-----------------------------------------------
+#apt list --installed>>$observatory/log/buildpilomar
+#echo ----------------------------------------------------------
+
+# Log start of the script (AFTER checking that the target directory exists)
+sudo chmod 777 $observatory/log
+echo $(date) buildpilomar script start >> $observatory/log/buildpilomar
+
+echo -e "==========================================================="
+echo -e "\E[36;40mGeneral System Update...\E[0m"
+echo $(date) General System Update >> $observatory/log/buildpilomar
+# Update and upgrade the package directories
+sudo apt update && sudo apt upgrade -y
