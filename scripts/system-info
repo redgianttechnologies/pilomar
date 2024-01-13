@@ -14,22 +14,7 @@ uptime=$(uptime)
 # Get the kernel version
 kernel_version=$(uname -r)
 
-# Get the CPU information
-cpu_info=$(cat /proc/cpuinfo)
-
-# Get the memory information
-memory_info=$(free -h)
-
-# Get the disk information
-disk_info=$(df -h)
-
 # Print the system information
 echo "Hostname: $hostname"
 echo "Uptime: $uptime"
 echo "Kernel version: $kernel_version"
-echo "CPU information:"
-echo "$cpu_info"
-echo "Memory information:"
-echo "$memory_info"
-echo "Disk information:"
-echo "$disk_info"
