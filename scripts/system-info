@@ -11,10 +11,14 @@ hostname=$(hostname)
 # Get the uptime
 uptime=$(uptime)
 
+# Debian Version
+version=$(. /etc/os-release; echo $PRETTY_NAME)
+
 # Get the kernel version
 kernel_version=$(uname -r)
 
 # Print the system information
 echo "Hostname: $hostname"
 echo "Uptime: $uptime"
+echo "System Version: $version"
 echo "Kernel version: $kernel_version"
