@@ -13,7 +13,7 @@ echo -e
 curUser=$(whoami)
 echo "You are currently logged in as: $curUser"
 echo -e
-export observatory='/home/$curUser/pilomar'
+export observatory='/home/'$curUser'/pilomar'
 echo home directory is: $observatory
 echo -e
 
