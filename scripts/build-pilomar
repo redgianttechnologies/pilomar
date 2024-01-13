@@ -10,7 +10,7 @@
 source ./system-info
 
 echo -e
-curUser=${whoami}
+curUser=$(whoami)
 echo "You are currently logged in as: $curUser"
 echo -e
 export observatory='/home/$curUser/pilomar'
@@ -18,11 +18,11 @@ echo home directory is: $observatory
 echo -e
 
 # list current packages and versions.
-echo Initial packages installed>>$observatory/log/buildpilomar
-echo - dpkg list:----------------------------------------------
-dpkg-query -l>>$observatory/log/buildpilomar
-echo - pip3 list:----------------------------------------------
-pip3 list>>$observatory/log/buildpilomar
-echo - apt list:-----------------------------------------------
-apt list --installed>>$observatory/log/buildpilomar
-echo ----------------------------------------------------------
+#echo Initial packages installed>>$observatory/log/buildpilomar
+#echo - dpkg list:----------------------------------------------
+#dpkg-query -l>>$observatory/log/buildpilomar
+#echo - pip3 list:----------------------------------------------
+#pip3 list>>$observatory/log/buildpilomar
+#echo - apt list:-----------------------------------------------
+#apt list --installed>>$observatory/log/buildpilomar
+#echo ----------------------------------------------------------
