@@ -10,7 +10,10 @@
 source ./system-info
 
 echo -e
-export observatory='/home/pi/pilomar'
+curUser=${whoami}
+echo "You are currently logged in as: $curUser"
+echo -e
+export observatory='/home/$curUser/pilomar'
 echo home directory is: $observatory
 echo -e
 
