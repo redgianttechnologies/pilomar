@@ -30,11 +30,11 @@ echo -e
 #echo ----------------------------------------------------------
 
 # Log start of the script (AFTER checking that the target directory exists)
-sudo chmod 777 $observatory/log
-echo $(date) buildpilomar script start >> $observatory/log/buildpilomar
+#sudo chmod 777 $observatory/log
+#echo $(date) buildpilomar script start >> $observatory/log/buildpilomar
 
 echo -e "==========================================================="
 echo -e "\E[36;40mGeneral System Update...\E[0m"
-echo $(date) General System Update >> $observatory/log/buildpilomar
+#echo $(date) General System Update >> $observatory/log/buildpilomar
 # Update and upgrade the package directories
 sudo apt update && sudo apt upgrade -y
